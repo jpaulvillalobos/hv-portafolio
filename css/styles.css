@@ -1,0 +1,636 @@
+/* ==========================================================================
+   1. CONFIGURACIÓN GENERAL Y VARIABLES (DARK/LIGHT MODE)
+   ========================================================================== */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --primary-color: #38bdf8;
+    --accent-color: #0ea5e9;
+    --border-color: #334155;
+    --header-bg: #1e293b;
+    --nav-bg: rgba(30, 41, 59, 0.95);
+}
+
+[data-theme="light"] {
+    --bg-color: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --primary-color: #0284c7;
+    --accent-color: #0369a1;
+    --border-color: #e2e8f0;
+    --header-bg: #0f172a;
+    --nav-bg: rgba(15, 23, 42, 0.95);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en los enlaces de la barra nav */
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-top: 70px; /* Previene que el menú fijo tape la cabecera */
+}
+
+/* ==========================================================================
+   2. STICKY NAVBAR & RESPONSIVE MENÚ
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 2000;
+}
+
+.nav-container {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    padding: 0.3rem 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Botón Hamburguesa Móvil */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   3. CABECERA Y FOTO CIRCULAR
+   ========================================================================== */
+header {
+    background-color: var(--header-bg);
+    padding: 3rem 1.5rem;
+    text-align: center;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.profile-photo-container {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    background-color: var(--card-bg);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header h1 {
+    font-size: 2.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.contact-bar {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+.contact-bar a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+/* ==========================================================================
+   3. CABECERA Y FOTO CIRCULAR
+   ========================================================================== */
+header {
+    background-color: var(--header-bg);
+    padding: 3rem 1.5rem;
+    text-align: center;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+/* Fuerza a que el título principal sea blanco en cualquier modo */
+header h1 {
+    font-size: 2.3rem;
+    margin-bottom: 0.4rem;
+    color: #ffffff; /* <- Cambiado a blanco puro */
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Asegura que los textos adicionales de la cabecera (como en el portafolio) sean blancos */
+header p {
+    color: #ffffff !important; /* <- Fuerza el blanco para descripciones secundarias en el header */
+}
+
+.contact-bar {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    color: #ffffff; /* <- Mantiene los textos de contacto en blanco */
+}
+
+.contact-bar a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   4. SECCIONES, GRIDS Y COMPONENTES
+   ========================================================================== */
+.container {
+    max-width: 1000px;
+    margin: 2.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+
+.main-section, .grid-section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.help-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-left: auto;
+}
+
+.columns-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.columns-grid .grid-section { margin-bottom: 0; }
+
+.education-item { margin-bottom: 1.2rem; }
+.institution { font-size: 0.95rem; font-weight: 500; }
+.year { font-size: 0.85rem; color: var(--text-muted); }
+.languages-block { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); }
+.languages-block h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--primary-color); }
+
+.certifications-list { list-style: none; }
+.certifications-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+.certifications-list li::before {
+    content: "▹"; position: absolute; left: 0; color: var(--primary-color); font-weight: bold;
+}
+
+/* Logros en cuadrícula */
+.logros-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+}
+
+.logro-card {
+    background-color: var(--bg-color);
+    padding: 1.2rem;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+/* Habilidades en etiquetas */
+.skills-container { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.skill-tag {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Banner de portafolio */
+.portfolio-banner {
+    background: linear-gradient(135deg, var(--card-bg) 0%, #1e293b 100%);
+    border: 1px solid var(--primary-color);
+    border-left: 6px solid var(--primary-color);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+[data-theme="light"] .portfolio-banner {
+    background: linear-gradient(135deg, var(--card-bg) 0%, #e2e8f0 100%);
+}
+
+.portfolio-banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.portfolio-btn {
+    background-color: var(--primary-color);
+    color: #0f172a !important;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+}
+
+.portfolio-btn:hover { transform: translateY(-2px); background-color: var(--accent-color); }
+
+/* ==========================================================================
+   5. COMPONENTE: CONTADORES ANIMADOS (STATS)
+   ========================================================================== */
+.stats-section {
+    margin-bottom: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-top: 0.3rem;
+}
+
+/* ==========================================================================
+   6. COMPONENTE: ACORDEÓN PARA EXPERIENCIA LABORAL
+   ========================================================================== */
+.accordion-item {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.accordion-header {
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.accordion-header:hover {
+    background-color: rgba(56, 189, 248, 0.05);
+}
+
+.job-meta-title h3 { font-size: 1.15rem; color: var(--text-color); }
+.company { font-weight: 600; color: var(--primary-color); font-size: 0.95rem; }
+.job-meta-date { display: flex; align-items: center; gap: 1rem; }
+.date { font-size: 0.9rem; color: var(--text-muted); }
+
+.arrow-icon {
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+/* Control del acordeón oculto / visible */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1); /* Animación nativa fluida */
+    background-color: var(--card-bg);
+}
+
+.job-tasks {
+    list-style: none;
+    padding: 1.5rem;
+}
+
+.job-tasks li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.job-tasks li::before {
+    content: "▹"; position: absolute; left: 0; color: var(--primary-color); font-weight: bold;
+}
+
+/* Clases activas inyectadas por JS */
+.accordion-item.active .accordion-content {
+    max-height: 1000px; /* Suficiente espacio para expandirse */
+    transition: max-height 0.4s cubic-bezier(1, 0, 1, 0);
+}
+
+.accordion-item.active .arrow-icon {
+    transform: rotate(180px); /* Gira la flecha cuando se expande */
+}
+
+/* ==========================================================================
+   7. EFECTO DE ANIMACIÓN DE ENTRADA SUAVE (FADE IN + SLIDE)
+   ========================================================================== */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   8. FOOTER, INTERRUPTOR Y RESPONSIVE MÓVIL
+   ========================================================================== */
+footer { background-color: var(--header-bg); padding: 2rem 1.5rem; margin-top: 4rem; border-top: 1px solid var(--border-color); }
+.footer-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+.status-tag { font-size: 0.9rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+.dot { height: 8px; width: 8px; background-color: #22c55e; border-radius: 50%; box-shadow: 0 0 8px #22c55e; }
+.credits { font-size: 0.8rem; color: var(--text-muted); }
+.download-btn { background-color: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: bold; display: inline-flex; align-items: center; gap: 0.5rem; }
+.download-btn:hover { background-color: var(--primary-color); color: #0f172a !important; }
+[data-theme="light"] .download-btn:hover { color: #ffffff !important; }
+.footer-social { display: flex; gap: 1rem; }
+.footer-social a { color: var(--text-muted); font-size: 1.3rem; }
+.footer-social a:hover { color: var(--primary-color); }
+
+.theme-btn {
+    position: fixed; top: 1.5rem; right: 1.5rem; background-color: var(--card-bg); color: var(--primary-color); border: 1px solid var(--border-color); padding: 0.8rem; border-radius: 50%; cursor: pointer; z-index: 1000;
+}
+
+/* RESPONSIVE MOBILE MEDIA QUERIES */
+@media (max-width: 768px) {
+    .columns-grid, .stats-grid { grid-template-columns: 1fr; }
+    .accordion-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .job-meta-date { width: 100%; justify-content: space-between; }
+    
+    /* Configuración menú responsivo vertical */
+    .menu-toggle { display: flex; }
+    .nav-links {
+        position: absolute; top: 70px; left: -100%; width: 100%; height: calc(100vh - 70px);
+        background-color: var(--nav-bg); flex-direction: column; align-items: center;
+        padding-top: 3rem; transition: left 0.3s ease;
+    }
+    .nav-links.active { left: 0; }
+    
+    /* Animación del botón hamburguesa activo */
+    .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.active .bar:nth-child(1) { transform: translateY(8px) rotate(45px); }
+    .menu-toggle.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45px); }
+}
+
+/* ==========================================================================
+   11. NUEVOS ESTILOS EXCLUSIVOS PARA LA PÁGINA DE PORTAFOLIO
+   ========================================================================== */
+
+/* Cabecera de la tarjeta del proyecto */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Etiqueta visual de especialidad del proyecto (ej: Infraestructura, Cloud) */
+.project-tag {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--primary-color);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* Cuerpo adaptivo: Grid de 2 columnas en PC (55% texto, 45% fotos) */
+.project-body {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.project-description h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.project-description h4 {
+    font-size: 0.95rem;
+    margin: 1rem 0 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.project-description p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* --- MAQUETACIÓN DEL SCROLL DE FOTOS (SLIDER INTERACTIVO) --- */
+.project-gallery {
+    width: 100%;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Altura ideal fija para los captures de pantalla o fotos */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Fila horizontal oculta que contiene todas las imágenes alineadas */
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* JavaScript manejará el desplazamiento horizontal de manera limpia */
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta y recorta la imagen proporcionalmente */
+    flex-shrink: 0; /* Previene que el navegador encoja las fotos fuera del marco */
+}
+
+/* Flechas flotantes encima de la fotografía */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(15, 23, 42, 0.7);
+    color: #ffffff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.2s;
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    background-color: var(--primary-color);
+    color: #0f172a;
+}
+
+.slider-btn.prev { left: 0.8rem; }
+.slider-btn.next { right: 0.8rem; }
+
+.gallery-help {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* RESPONSIVE: En pantallas medianas o celulares, las fotos pasan abajo del texto automáticamente */
+@media (max-width: 850px) {
+    .project-body {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .slider-wrapper {
+        height: 280px; /* Un poco más de altura en móviles */
+    }
+}

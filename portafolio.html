@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean Paul Villalobos Gómez | Portafolio de Proyectos</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">JP<span>.</span></a>
+            
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#perfil" class="nav-link">Perfil</a></li>
+                <li><a href="index.html#experiencia" class="nav-link">Experiencia</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <div class="header-container">
+            <h1>Mi Portafolio Técnico</h1>
+            <p class="subtitle">Evidencias, laboratorios de red e implementaciones de infraestructura</p>
+            <p style="color: #ffffff; max-width: 600px; margin: 0 auto; font-size: 0.95rem;">
+                Colección de auditorías, despliegues de servidores, análisis masivo de datos y soluciones de conectividad TI.
+            </p>
+        </div>
+    </header>
+
+    <div class="container" id="proyectos">
+
+        <section class="main-section project-card scroll-animate">
+            <div class="project-header">
+                <h2><i class="fas fa-server"></i> Traslado de Datacenter - Agencia Logística FF.MM.</h2>
+                <span class="project-tag">Infraestructura Crítica</span>
+            </div>
+            
+            <div class="project-body">
+                <div class="project-description">
+                    <h3>Descripción de la Tarea y Rol</h3>
+                    <p>Lideré de extremo a extremo la planeación técnica, desconexión, embalaje seguro, traslado físico y posterior montaje del core de red y servidores de la Agencia Logística de las Fuerzas Militares.</p>
+                    
+                    <h4>Hitos y Evidencias Técnicas:</h4>
+                    <ul class="certifications-list">
+                        <li>Levantamiento de inventario de activos críticos y diagramación previa de topología lógica y física.</li>
+                        <li>Configuración y aseguramiento de backups del estado del sistema de firewalls y switches Core (Cisco/Juniper).</li>
+                        <li>Coordinación de ventanas de mantenimiento bajo estrictas métricas de ANS (SLA) para minimizar el downtime.</li>
+                        <li>Pruebas de conectividad post-traslado, validando servicios DNS, DHCP, Active Directory y túneles VPN.</li>
+                    </ul>
+                </div>
+
+                <div class="project-gallery">
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=500&q=80" alt="Evidencia Datacenter 1" class="slide-img">
+                            <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=500&q=80" alt="Evidencia Datacenter 2" class="slide-img">
+                        </div>
+                        <button class="slider-btn prev" aria-label="Foto anterior"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" aria-label="Siguiente foto"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <p class="gallery-help"><i class="fas fa-hand-pointer"></i> Usa las flechas o desliza para ver las evidencias</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section project-card scroll-animate">
+            <div class="project-header">
+                <h2><i class="fas fa-network-wired"></i> Infraestructura de Red Lógica - TESERACT LTDA</h2>
+                <span class="project-tag">Routing & Switching</span>
+            </div>
+            
+            <div class="project-body">
+                <div class="project-description">
+                    <h3>Descripción de la Tarea y Rol</h3>
+                    <p>Diseño e implementación desde cero de la topología de red de la compañía, la cual carecía de segmentación lógica de tráfico y presentaba serios problemas de seguridad perimetral.</p>
+                    
+                    <h4>Hitos y Evidencias Técnicas:</h4>
+                    <ul class="certifications-list">
+                        <li>Segmentación mediante VLANs independientes (Administración, Operaciones, VoIP, Cámaras NVR).</li>
+                        <li>Configuración de servicios de almacenamiento seguro NAS corporativo y políticas de acceso en Active Directory.</li>
+                        <li>Implementación de políticas perimetrales robustas en Firewall Fortinet y levantamiento de túneles VPN SSL seguros para teletrabajo.</li>
+                    </ul>
+                </div>
+
+                <div class="project-gallery">
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=500&q=80" alt="Evidencia Red 1" class="slide-img">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="Evidencia Red 2" class="slide-img">
+                        </div>
+                        <button class="slider-btn prev" aria-label="Foto anterior"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" aria-label="Siguiente foto"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <p class="gallery-help"><i class="fas fa-hand-pointer"></i> Usa las flechas o desliza para ver las evidencias</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section project-card scroll-animate">
+            <div class="project-header">
+                <h2><i class="fas fa-chart-bar"></i> Auditoría de Datos e Indicadores de Despliegue - MINTIC</h2>
+                <span class="project-tag">Análisis de Datos & QA</span>
+            </div>
+            
+            <div class="project-body">
+                <div class="project-description">
+                    <h3>Descripción de la Tarea y Rol</h3>
+                    <p>Como Analista de Calidad, estructuré el procesamiento masivo de datos para auditar y normalizar la documentación técnica de estudios de campo e instalaciones del proyecto Centros Poblados.</p>
+                    
+                    <h4>Hitos y Evidencias Técnicas:</h4>
+                    <ul class="certifications-list">
+                        <li>Construcción de pipelines de limpieza de datos con **Power Query** para unificar reportes de múltiples proveedores externos.</li>
+                        <li>Diseño de un **Dashboard interactivo en Power BI** para el monitoreo en tiempo real del cumplimiento de entregables e hitos del proyecto.</li>
+                        <li>Generación de informes de interventoría técnica con análisis predictivo sobre retrasos de instalación usando fórmulas complejas en Excel Avanzado.</li>
+                    </ul>
+                </div>
+
+                <div class="project-gallery">
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Dashboard Power BI 1" class="slide-img">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Auditoría Excel 2" class="slide-img">
+                        </div>
+                        <button class="slider-btn prev" aria-label="Foto anterior"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" aria-label="Siguiente foto"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <p class="gallery-help"><i class="fas fa-hand-pointer"></i> Usa las flechas o desliza para ver las evidencias</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section project-card scroll-animate">
+            <div class="project-header">
+                <h2><i class="fas fa-globe"></i> Despliegue, Balanceo y Hardening de Servidores Web Corporativos</h2>
+                <span class="project-tag">SysAdmin & Web Servers</span>
+            </div>
+            
+            <div class="project-body">
+                <div class="project-description">
+                    <h3>Descripción de la Tarea y Rol</h3>
+                    <p>Montaje, optimización y aseguramiento perimetral de la infraestructura de servidores de aplicaciones web basados en entornos Linux y Windows Server.</p>
+                    
+                    <h4>Hitos y Evidencias Técnicas:</h4>
+                    <ul class="certifications-list">
+                        <li>Implementación y puesta a punto de servidores web **Nginx** y **Apache** sobre distribuciones Ubuntu Server.</li>
+                        <li>Configuración de **Nginx como Proxy Inverso** y balanceador de carga para distribuir el tráfico lógicamente y mitigar cuellos de botella.</li>
+                        <li>Instalación e integración de certificados SSL/TLS con Let's Encrypt mediante automatizaciones de renovación automática (*Certbot cronjobs*).</li>
+                        <li>Hardening de servicios web deshabilitando firmas de servidor, limitando métodos HTTP e integrando módulos ModSecurity (WAF).</li>
+                    </ul>
+                </div>
+
+                <div class="project-gallery">
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=500&q=80" alt="Consola Servidor Linux" class="slide-img">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80" alt="Certificado SSL Seguro" class="slide-img">
+                        </div>
+                        <button class="slider-btn prev" aria-label="Foto anterior"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" aria-label="Siguiente foto"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <p class="gallery-help"><i class="fas fa-hand-pointer"></i> Usa las flechas o desliza para ver las evidencias</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section project-card scroll-animate">
+            <div class="project-header">
+                <h2><i class="fas fa-shield-virus"></i> Laboratorio de Análisis de Vulnerabilidades y Pentesting</h2>
+                <span class="project-tag">Ciberseguridad / Kali</span>
+            </div>
+            
+            <div class="project-body">
+                <div class="project-description">
+                    <h3>Descripción de la Tarea y Rol</h3>
+                    <p>Diseño de entornos controlados y simulados para auditoría de redes inalámbricas y cableadas orientadas a la detección temprana de brechas de seguridad perimetral.</p>
+                    
+                    <h4>Hitos y Evidencias Técnicas:</h4>
+                    <ul class="certifications-list">
+                        <li>Uso de **Nmap** de forma avanzada para el descubrimiento de activos, mapeo de puertos abiertos y detección de banners del sistema operativo.</li>
+                        <li>Ejecución de análisis automatizados de vulnerabilidades en servicios de red mediante **Nessus** y OpenVAS.</li>
+                        <li>Auditoría y pruebas de robustez en protocolos de cifrado de redes Wi-Fi (WPA2/WPA3 Personal y Enterprise) con la suite de **Aircrack-ng**.</li>
+                        <li>Elaboración de informes de remediación técnica y hardening basados en los fallos detectados bajo el marco OWASP.</li>
+                    </ul>
+                </div>
+
+                <div class="project-gallery">
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=500&q=80" alt="Pentesting Terminal" class="slide-img">
+                            <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=500&q=80" alt="Seguridad de Redes" class="slide-img">
+                        </div>
+                        <button class="slider-btn prev" aria-label="Foto anterior"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" aria-label="Siguiente foto"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <p class="gallery-help"><i class="fas fa-hand-pointer"></i> Usa las flechas o desliza para ver las evidencias</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section project-card scroll-animate">
+            <div class="project-header">
+                <h2><i class="fas fa-code"></i> Creación de Plataforma Web Profesional y Control de Versiones</h2>
+                <span class="project-tag">Desarrollo Web / DevOps</span>
+            </div>
+            
+            <div class="project-body">
+                <div class="project-description">
+                    <h3>Descripción de la Tarea y Rol</h3>
+                    <p>Maquetación, diseño responsivo y lógica interactiva aplicados al desarrollo de soluciones web nativas optimizadas para motores de búsqueda (SEO) y accesibilidad.</p>
+                    
+                    <h4>Hitos y Evidencias Técnicas:</h4>
+                    <ul class="certifications-list">
+                        <li>Arquitectura web semántica escrita con **HTML5** estándar y layouts adaptivos (**CSS Grid y Flexbox**).</li>
+                        <li>Programación en **Vanilla JavaScript** para la manipulación dinámica del DOM (cambio de temas claro/oscuro, acordeones dinámicos y Sliders de imágenes independientes).</li>
+                        <li>Gestión del ciclo de vida del código mediante control de versiones con **Git**, aplicando la separación de ramas y despliegue a producción en GitHub Pages.</li>
+                    </ul>
+                </div>
+
+                <div class="project-gallery">
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=500&q=80" alt="Editor VS Code" class="slide-img">
+                            <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=500&q=80" alt="Repositorio GitHub" class="slide-img">
+                        </div>
+                        <button class="slider-btn prev" aria-label="Foto anterior"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" aria-label="Siguiente foto"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <p class="gallery-help"><i class="fas fa-hand-pointer"></i> Usa las flechas o desliza para ver las evidencias</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p class="status-tag"><span class="dot"></span> Disponible para nuevos retos en TI y Redes</p>
+                <p class="credits">© 2026 Jean Paul Villalobos Gómez. Desarrollado desde cero.</p>
+            </div>
+            <div class="footer-actions">
+                <a href="Nueva_HV_2026_Suba(1).pdf" download class="download-btn">
+                    <i class="fas fa-file-pdf"></i> Descargar HV (PDF)
+                </a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/jean-paul-villaloboss-394579252/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:jeanpaulvillalobos@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
