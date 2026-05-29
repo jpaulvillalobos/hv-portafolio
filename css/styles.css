@@ -485,7 +485,7 @@ footer { background-color: var(--header-bg); padding: 2rem 1.5rem; margin-top: 4
     position: fixed; top: 1.5rem; right: 1.5rem; background-color: var(--card-bg); color: var(--primary-color); border: 1px solid var(--border-color); padding: 0.8rem; border-radius: 50%; cursor: pointer; z-index: 1000;
 }
 
-/* RESPONSIVE MOBILE MEDIA QUERIES */
+/* RESPONSIVE MOBILE MEDIA QUERIES (Bloque existente en tu CSS) */
 @media (max-width: 768px) {
     .columns-grid, .stats-grid { grid-template-columns: 1fr; }
     .accordion-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
@@ -504,8 +504,18 @@ footer { background-color: var(--header-bg); padding: 2rem 1.5rem; margin-top: 4
     .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
     .menu-toggle.active .bar:nth-child(1) { transform: translateY(8px) rotate(45px); }
     .menu-toggle.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45px); }
-}
 
+    /* ==========================================================================
+       NUEVO AJUSTE: REUBICACIÓN DEL BOTÓN MODO OSCURO EN CELULARES
+       ========================================================================== */
+    .theme-btn {
+        top: auto;          /* Cancela la posición superior que tenía en PC */
+        bottom: 2rem;       /* Lo ubica abajo en la pantalla */
+        right: 1.5rem;      /* Lo mantiene pegado a la derecha */
+        padding: 1rem;      /* Lo hace ligeramente más grande para pantallas táctiles */
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    }
+}
 /* ==========================================================================
    11. NUEVOS ESTILOS EXCLUSIVOS PARA LA PÁGINA DE PORTAFOLIO
    ========================================================================== */
