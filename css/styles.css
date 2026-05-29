@@ -644,3 +644,49 @@ footer { background-color: var(--header-bg); padding: 2rem 1.5rem; margin-top: 4
         height: 280px; /* Un poco más de altura en móviles */
     }
 }
+
+/* ==========================================================================
+   12. BOTÓN INTERRUPTOR DE IDIOMA (BILINGÜE)
+   ========================================================================== */
+.lang-btn {
+    position: fixed;
+    top: 1.3rem;
+    left: 1.5rem; /* Ubicado exactamente a la izquierda */
+    background-color: var(--card-bg);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 0.9rem;
+    border-radius: 20px; /* Estilo ovalado moderno */
+    cursor: pointer;
+    z-index: 3000; /* Flota por encima de la navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none; /* Quita el subrayado de enlace */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.lang-btn:hover {
+    transform: scale(1.05);
+    background-color: var(--primary-color);
+    color: #0f172a;
+}
+
+/* RESPONSIVE: En celulares bajamos el botón de idioma abajo a la izquierda para no romper la navbar */
+@media (max-width: 768px) {
+    .lang-btn {
+        top: auto;
+        bottom: 2rem; /* Al alineado abajo con el botón de modo oscuro */
+        left: 1.5rem;
+        padding: 0.8rem 1.1rem;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
+    /* Le damos espacio al logo para que el botón de hamburguesa no lo empuje */
+    .nav-logo {
+        margin-left: 1rem;
+    }
+}
