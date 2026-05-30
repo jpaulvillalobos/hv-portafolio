@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "title": "Masterclass: Aministración de Servidores",
+        "description": "Aprende paso a paso a configurar Nginx como proxy inverso, balanceo de cargas e implementar ModSecurity (WAF) contra ataques OWASP.",
+        "category": "cursos",
+        "badge": "Curso en Video",
+        "iconClass": "fas fa-video",
+        "price": "COP $120.000",
+        "rating": "4.9",
+        "link": "https://www.hotmart.com/tu-link-aqui"
+    },
+    {
+        "id": 2,
+        "title": "E-book: Guía Práctica de Migración de Datacenters Críticos",
+        "description": "Plantillas de inventarios, checklists lógicos para switches Cisco/Juniper y metodologías para mitigar el downtime en ventanas de mantenimiento.",
+        "category": "guias",
+        "badge": "Guía PDF de Ingeniería",
+        "iconClass": "fas fa-file-pdf",
+        "price": "COP $45.000",
+        "rating": "5.0",
+        "link": "https://gumroad.com/tu-link-aqui"
+    },
+    {
+        "id": 3,
+        "title": "Pack de Scripts de Reconocimiento Avanzado con Nmap",
+        "description": "Colección de scripts listos para auditorías perimetrales automatizadas, detección de banners del sistema operativo y vulnerabilidades de red.",
+        "category": "plantillas",
+        "badge": "Scripts & Automatización",
+        "iconClass": "fas fa-code",
+        "price": "COP $35.000",
+        "rating": "4.8",
+        "link": "#"
+    }
+]

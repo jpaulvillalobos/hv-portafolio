@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JP Tienda Técnica | Recursos y Capacitación</title>
+    <title>LOBOLINK SHOP | Centro de Recursos Técnicos</title>
     
     <link rel="stylesheet" href="css/tienda.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="../img/favicon.png">
+    
+    <link class="favicon" rel="icon" type="image/png" href="../img/favicon.png">
 </head>
 <body>
 
     <nav class="shop-navbar">
         <div class="shop-nav-container">
-            <a href="../index.html" class="shop-logo">JP<span>.</span>Shop</a>
+            <a href="../index.html" class="shop-logo-group">
+                <img src="https://i.postimg.cc/Qxd7hqKB/logo.png" alt="Icono LoboLink" class="lobolink-nav-logo">
+                <span class="shop-logo-text">LOBOLINK<span> SHOP</span></span>
+            </a>
             
             <ul class="shop-nav-links">
-                <li><a href="../portafolio.html" class="shop-nav-link"><i class="fas fa-arrow-left"></i> Volver al Portafolio</a></li>
+                <li>
+                    <a href="../portafolio.html" class="shop-nav-link">
+                        <i class="fas fa-arrow-left"></i> Volver al Portafolio
+                    </a>
+                </li>
                 <li><a href="#productos" class="shop-nav-link active">Productos</a></li>
             </ul>
         </div>
@@ -24,8 +33,10 @@
 
     <header class="shop-hero">
         <div class="shop-hero-container">
-            <span class="shop-badge">Potencia tus habilidades en TI</span>
-            <h1>Centro de Recursos Digitales</h1>
+            <div class="lobolink-full-logo-container">
+                <img src="https://i.postimg.cc/Qxd7hqKB/logo.png" alt="LoboLink - Conecta, Protege, Evoluciona" class="lobolink-full-logo">
+            </div>
+            <h1>Tu Centro de Recursos Técnicos</h1>
             <p class="shop-subtitle">E-books de hardening, plantillas de infraestructura y cursos premium para ingenieros y administradores de sistemas.</p>
         </div>
     </header>
@@ -39,70 +50,16 @@
             <button class="filter-btn" data-category="plantillas">Estructuras y Scripts</button>
         </div>
 
-        <div class="shop-grid">
-            
-            <article class="product-card" data-category="cursos">
-                <div class="product-badge">Curso en Video</div>
-                <div class="product-image">
-                    <i class="fas fa-video-camera"></i>
-                </div>
-                <div class="product-content">
-                    <h3 class="product-title">Masterclass: Despliegue y Hardening de Servidores Web</h3>
-                    <p class="product-description">Aprende paso a paso a configurar Nginx como proxy inverso, balanceo de cargas e implementar ModSecurity (WAF) contra ataques OWASP.</p>
-                    <div class="product-meta">
-                        <span class="product-price">COP $XX.XXX</span>
-                        <span class="product-rating"><i class="fas fa-star"></i> 4.9</span>
-                    </div>
-                    <a href="#" target="_blank" class="buy-btn">
-                        <i class="fas fa-shopping-cart"></i> Adquirir Curso
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card" data-category="guias">
-                <div class="product-badge">Guía PDF de Ingeniería</div>
-                <div class="product-image">
-                    <i class="fas fa-file-pdf"></i>
-                </div>
-                <div class="product-content">
-                    <h3 class="product-title">E-book: Guía Práctica de Migración de Datacenters Críticos</h3>
-                    <p class="product-description">Plantillas de inventarios, checklists lógicos para switches Cisco/Juniper y metodologías para mitigar el downtime en ventanas de mantenimiento.</p>
-                    <div class="product-meta">
-                        <span class="product-price">COP $XX.XXX</span>
-                        <span class="product-rating"><i class="fas fa-star"></i> 5.0</span>
-                    </div>
-                    <a href="#" target="_blank" class="buy-btn">
-                        <i class="fas fa-download"></i> Comprar e-Book
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card" data-category="plantillas">
-                <div class="product-badge">Scripts & Automatización</div>
-                <div class="product-image">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="product-content">
-                    <h3 class="product-title">Pack de Scripts de Reconocimiento Avanzado con Nmap</h3>
-                    <p class="product-description">Colección de scripts listos para auditorías perimetrales automatizadas, detección de banners del sistema operativo y vulnerabilidades de red.</p>
-                    <div class="product-meta">
-                        <span class="product-price">Gratuito / Premium</span>
-                        <span class="product-rating"><i class="fas fa-star"></i> 4.8</span>
-                    </div>
-                    <a href="#" target="_blank" class="buy-btn">
-                        <i class="fas fa-unlock-alt"></i> Acceder a los Archivos
-                    </a>
-                </div>
-            </article>
-
-        </div>
+        <div class="shop-grid" id="shop-grid">
+            </div>
+        
     </main>
 
-<footer class="shop-footer">
+    <footer class="shop-footer">
         <div class="shop-footer-container">
             <div class="shop-footer-info">
-                <p class="shop-brand">Jean Paul Villalobos Gómez <span>•</span> E-Learning & TI</p>
-                <p class="shop-copy">© 2026 Todos los derechos reservados. Procesamiento de pago seguro.</p>
+                <p class="shop-brand">LOBOLINK<span> •</span> E-Learning & TI</p>
+                <p class="shop-copy">© 2026 Todos los derechos reservados. Procesamiento de pago seguro externo.</p>
             </div>
             <div class="shop-footer-badges">
                 <i class="fab fa-cc-visa" title="Visa"></i>
@@ -112,7 +69,7 @@
         </div>
     </footer>
 
-    <script src="/tienda/js/tienda.js"></script>
+    <script src="js/tienda.js"></script>
 
 </body>
 </html>

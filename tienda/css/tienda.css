@@ -1,12 +1,12 @@
 /* ==========================================================================
-   1. VARIABLES DE DISEÑO (Paleta Negro, Gris y Naranja Hotmart)
+   1. VARIABLES DE DISEÑO (Paleta Negro, Gris y CIAN LOBOLINK)
    ========================================================================== */
 :root {
     --bg-dark: #0a0a0c;          /* Fondo profundo de la tienda */
     --bg-card: #141418;          /* Gris oscuro para las tarjetas de producto */
     --bg-card-hover: #1c1c22;    /* Gris más claro al pasar el mouse */
-    --orange-primary: #ff5a00;   /* Naranja corporativo/vibrante para CTA */
-    --orange-hover: #e04f00;     /* Naranja oscuro para interacciones */
+    --orange-primary: #00FFFF;   /* CIAN vibrante de LoboLink para CTA */
+    --orange-hover: #00cccc;     /* Cian más oscuro para interacciones */
     --text-main: #f3f4f6;        /* Texto blanco/gris brillante de alta lectura */
     --text-muted: #9ca3af;       /* Texto gris secundario para descripciones */
     --border-color: #26262b;     /* Bordes sutiles para separar secciones */
@@ -69,13 +69,24 @@ a {
     align-items: center;
 }
 
-.shop-logo {
+.shop-logo-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lobolink-nav-logo {
+    height: 32px;
+    width: auto;
+}
+
+.shop-logo-text {
     font-size: 1.4rem;
     font-weight: 800;
     letter-spacing: -0.5px;
 }
 
-.shop-logo span {
+.shop-logo-text span {
     color: var(--orange-primary);
 }
 
@@ -107,7 +118,7 @@ a {
     padding: 5rem 1.5rem 4rem 1.5rem;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
-    background: radial-gradient(circle at top, rgba(255, 90, 0, 0.08) 0%, transparent 60%);
+    background: radial-gradient(circle at top, rgba(0, 255, 255, 0.08) 0%, transparent 60%);
 }
 
 .shop-hero-container {
@@ -115,18 +126,15 @@ a {
     margin: 0 auto;
 }
 
-.shop-badge {
-    background-color: rgba(255, 90, 0, 0.1);
-    color: var(--orange-primary);
-    padding: 0.4rem 1rem;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.lobolink-full-logo-container {
+    margin-bottom: 2rem;
     display: inline-block;
-    margin-bottom: 1.5rem;
-    border: 1px solid rgba(255, 90, 0, 0.15);
+}
+
+.lobolink-full-logo {
+    max-width: 300px;
+    height: auto;
+    display: block;
 }
 
 .shop-hero h1 {
@@ -174,8 +182,9 @@ a {
 .filter-btn.active {
     background-color: var(--orange-primary);
     border-color: var(--orange-primary);
-    color: #ffffff;
-    box-shadow: 0 4px 12px rgba(255, 90, 0, 0.25);
+    color: #0a0a0c;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.25);
 }
 
 /* ==========================================================================
@@ -204,7 +213,7 @@ a {
 
 .product-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 90, 0, 0.3);
+    border-color: rgba(0, 255, 255, 0.3);
     background-color: var(--bg-card-hover);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
@@ -224,7 +233,6 @@ a {
     z-index: 2;
 }
 
-/* Contenedor visual del producto (Icono/Mockup) */
 .product-image {
     background: linear-gradient(135deg, #1c1c24 0%, #0f0f12 100%);
     height: 180px;
@@ -247,7 +255,6 @@ a {
     opacity: 1;
 }
 
-/* Cuerpo de la Tarjeta */
 .product-content {
     padding: 1.5rem;
     display: flex;
@@ -270,7 +277,6 @@ a {
     margin-bottom: 1.5rem;
 }
 
-/* Precios y Calificación */
 .product-meta {
     display: flex;
     justify-content: space-between;
@@ -289,17 +295,16 @@ a {
 
 .product-rating {
     font-size: 0.85rem;
-    color: #ffb800; /* Color dorado para las estrellas */
+    color: #ffb800;
     font-weight: 600;
     display: flex;
     align-items: center;
     gap: 0.25rem;
 }
 
-/* Botón de Compra Obligatorio (Call to Action) */
 .buy-btn {
     background-color: var(--orange-primary);
-    color: #ffffff;
+    color: #0a0a0c;
     text-align: center;
     padding: 0.8rem;
     border-radius: 8px;
@@ -317,7 +322,7 @@ a {
 .buy-btn:hover {
     background-color: var(--orange-hover);
     border-color: var(--orange-hover);
-    box-shadow: 0 4px 12px rgba(255, 90, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
 }
 
 /* ==========================================================================
@@ -362,14 +367,6 @@ a {
     color: var(--text-muted);
 }
 
-.shop-footer-badges i:hover {
-    color: var(--text-main);
-    transition: var(--transition);
-}
-
-/* ==========================================================================
-   8. RESPONSIVE DESIGN (Media Queries)
-   ========================================================================== */
 @media (min-width: 768px) {
     .shop-footer-container {
         flex-direction: row;
