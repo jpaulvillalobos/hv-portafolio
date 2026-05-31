@@ -10,32 +10,37 @@
     <link rel="icon" type="image/png" href="https://i.postimg.cc/HsQdpzgw/favicon.png">
 </head>
 <body>
-        <a href="index-en.html" class="lang-btn" aria-label="Cambiar idioma a Inglés">
-    <i class="fas fa-globe"></i> EN
-</a>
+    
+    <a href="index-en.html" class="lang-btn" aria-label="Cambiar idioma a Inglés">
+        <i class="fas fa-globe"></i> EN
+    </a>
 
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">JP<span>.</span></a>
             
-            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            
-            <ul class="nav-links" style="margin-right: 3.5rem;">
+            <ul class="nav-links" style="margin-right: 1rem;">
                 <li><a href="#perfil" class="nav-link">Perfil</a></li>
                 <li><a href="#educacion" class="nav-link">Educación</a></li>
                 <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
                 <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
             </ul>
+
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 1rem;">
+                
+                <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                
+            </div>
         </div>
     </nav>
-
-    <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
-        <i class="fas fa-moon"></i>
-    </button>
 
     <header>
         <div class="header-container">
@@ -247,7 +252,7 @@
 
     </div>
 
-<footer>
+    <footer>
         <div class="footer-container">
             <div class="footer-info">
                 <p class="status-tag"><span class="dot"></span> Disponible para nuevos retos en TI y Redes</p>
