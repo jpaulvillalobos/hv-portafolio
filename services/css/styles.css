@@ -1,12 +1,14 @@
 /* ==========================================================================
-   1. VARIABLES DE DISEÑO (Paleta Negro, Gris y CIAN LOBOLINK)
+   1. VARIABLES DE DISEÑO (Paleta Negro, Gris y NARANJA LOBOLINK SERVICES)
    ========================================================================== */
 :root {
-    --bg-dark: #0a0a0c;          /* Fondo profundo de la tienda */
-    --bg-card: #141418;          /* Gris oscuro para las tarjetas de producto */
+    --bg-dark: #0a0a0c;          /* Fondo profundo de la plataforma */
+    --bg-card: #141418;          /* Gris oscuro para las tarjetas de servicios */
     --bg-card-hover: #1c1c22;    /* Gris más claro al pasar el mouse */
-    --orange-primary: #00FFFF;   /* CIAN vibrante de LoboLink para CTA */
-    --orange-hover: #00cccc;     /* Cian más oscuro para interacciones */
+    --orange-primary: #FF6600;   /* NARANJA vibrante de LoboLink Services para CTA */
+    --orange-hover: #e05300;     /* Naranja más oscuro para interacciones */
+    --cyan-shop: #00FFFF;        /* CIAN original de LoboLink Shop para el botón cruzado */
+    --cyan-shop-hover: #00cccc;  /* Cian alterno para hover de tienda */
     --text-main: #f3f4f6;        /* Texto blanco/gris brillante de alta lectura */
     --text-muted: #9ca3af;       /* Texto gris secundario para descripciones */
     --border-color: #26262b;     /* Bordes sutiles para separar secciones */
@@ -49,7 +51,7 @@ a {
 }
 
 /* ==========================================================================
-   3. BARRA DE NAVEGACIÓN (Shop Navbar)
+   3. BARRA DE NAVEGACIÓN (Services Navbar)
    ========================================================================== */
 .shop-navbar {
     background-color: rgba(10, 10, 12, 0.85);
@@ -86,10 +88,6 @@ a {
     letter-spacing: -0.5px;
 }
 
-.shop-logo-text span {
-    color: var(--orange-primary);
-}
-
 .shop-nav-links {
     display: flex;
     gap: 1.5rem;
@@ -112,13 +110,12 @@ a {
 }
 
 /* ==========================================================================
-   4. ENCABEZADO COMERCIAL (Hero Section)
+   4. ENCABEZADO DE SERVICIOS (Hero Section)
    ========================================================================== */
 .shop-hero {
     padding: 5rem 1.5rem 4rem 1.5rem;
     text-align: center;
-    border-bottom: 1px solid var(--border-color);
-    background: radial-gradient(circle at top, rgba(0, 255, 255, 0.08) 0%, transparent 60%);
+    background: radial-gradient(circle at top, rgba(255, 102, 0, 0.07) 0%, transparent 60%);
 }
 
 .shop-hero-container {
@@ -184,11 +181,11 @@ a {
     border-color: var(--orange-primary);
     color: #0a0a0c;
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.25);
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.25);
 }
 
 /* ==========================================================================
-   6. REJILLA Y TARJETAS DE PRODUCTO (Grid & Cards)
+   6. REJILLA Y TARJETAS DE SERVICIOS (Grid & Cards)
    ========================================================================== */
 .shop-main {
     margin-bottom: 5rem;
@@ -213,7 +210,7 @@ a {
 
 .product-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(0, 255, 255, 0.3);
+    border-color: rgba(255, 102, 0, 0.3);
     background-color: var(--bg-card-hover);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
@@ -302,6 +299,7 @@ a {
     gap: 0.25rem;
 }
 
+/* Botón principal de solicitud/cotización */
 .buy-btn {
     background-color: var(--orange-primary);
     color: #0a0a0c;
@@ -322,11 +320,11 @@ a {
 .buy-btn:hover {
     background-color: var(--orange-hover);
     border-color: var(--orange-hover);
-    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
 }
 
 /* ==========================================================================
-   7. PIE DE PÁGINA COMERCIAL (Shop Footer)
+   7. PIE DE PÁGINA COMERCIAL (Services Footer)
    ========================================================================== */
 .shop-footer {
     background-color: #050507;
@@ -351,10 +349,6 @@ a {
     margin-bottom: 0.4rem;
 }
 
-.shop-brand span {
-    color: var(--orange-primary);
-}
-
 .shop-copy {
     font-size: 0.85rem;
     color: var(--text-muted);
@@ -364,9 +358,36 @@ a {
     display: flex;
     gap: 1rem;
     font-size: 1.5rem;
-    color: var(--text-muted);
 }
 
+/* Estilo base para botones estructurados de descarga/redirección */
+.download-btn { 
+    background-color: transparent; 
+    padding: 0.6rem 1.2rem; 
+    border-radius: 6px; 
+    text-decoration: none; 
+    font-size: 0.9rem; 
+    font-weight: bold; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 0.5rem; 
+    transition: var(--transition);
+}
+
+/* PRESERVACIÓN EN CIAN: Botón exclusivo para volver a LoboLink Shop */
+.shop-btn {
+    background-color: var(--cyan-shop) !important;
+    border: 2px solid var(--cyan-shop) !important;
+    color: #0a0a0c !important;
+}
+
+.shop-btn:hover {
+    background-color: var(--cyan-shop-hover) !important;
+    border-color: var(--cyan-shop-hover) !important;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+}
+
+/* Responsive query */
 @media (min-width: 768px) {
     .shop-footer-container {
         flex-direction: row;
@@ -378,4 +399,3 @@ a {
         font-size: 3.5rem;
     }
 }
-.download-btn { background-color: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: bold; display: inline-flex; align-items: center; gap: 0.5rem; }
